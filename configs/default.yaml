@@ -10,7 +10,10 @@ pattern : null
 random_pattern : True
 
 # Amount of genes in each generation
-gene_count : 25
+gene_count : 100
 
 # Mutation rate of each gene, 1 in <mutation_rate> chance
 mutation_rate : 4
+
+# How well the best organism performs before changing goal
+correctness_threshold : 0.9
