@@ -1,0 +1,45 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Patterned self-Assembly Tile set Synthesis}
+
+\author{Andrew Rodriguez\\ \texttt{andrew.rodriguez09@utrgv.edu}} % Author name and email address
+
+\date{University of Texas Rio Grande Valley --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\N}{\mathbb{N}}
+
+\begin{document}
+
+\maketitle % Print the title
+
+\section{Definitions}
+
+\textbf{Abstract Tile Assembly Model (aTAM).}
+Let $\Sigma$ be the set of \emph{states}, also referred to as a \emph{tile set}. A \emph{tile} $t=(\sigma, p)$ is a unit square where $\sigma \in \Sigma$ and $p$ is its position and $p \in \Z^2$. An \emph{assembly} $A$ is a set of tiles where for every pair of tiles $t_1 = (\sigma_1, p)$ and $t_2 = (\sigma_2, p')$, $p \ne p'$. A \emph{glue strength function} $s$ is defined as $s: \Sigma \times \Sigma \rightarrow \N$. A \emph{tile assembly system} is a 4-tuple $\Tau = (\Sigma, S, s, \tau)$ where $\Sigma$ is the tile set, $S$ is the seed assembly, $s$ is the glue strength function and $\tau$ is the temperature.
+
+\vspace{5mm}
+\noindent
+\textbf{K-Colored Pattern.}
+Given the fixed dimensions $m$ and $n$, a mapping from $[m] \times [n] \subseteq \Z^2$ onto $[k]$ defines a \emph{k-colored pattern}. The k-colored pattern will be extended by adding tiles to the south and west borders to create an L shape seed assembly for our tile assembly system.
+
+\vspace{5mm}
+\noindent
+\textbf{Patterned self-assembly tile set synthesis (PATS).}
+Given a k-colored pattern $c: [m] \times [n] \rightarrow [k]$, find a tile assembly system $\Tau = (\Sigma, S, s, \tau=2)$ where all tiles in $\Sigma$ have glue strength 1 and there exists a tile coloring $tc: \Sigma \rightarrow [k]$ such that each terminal assembly $A$ satisfies $tc(A(x,y)) = c(x,y)$ for all $(x,y) \in [m] \times [n]$.
+
+
+\end{document}
