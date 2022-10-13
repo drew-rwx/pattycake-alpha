@@ -1,0 +1,24 @@
+---
+# The size of the pattern, not including the L seed
+pattern_size : 4
+
+# A <pattern_size> X <pattern_size> 2D array
+# This field can be null
+pattern : 
+  - [0, 0, 1, 0]
+  - [0, 1, 1, 1]
+  - [1, 0, 1, 0]
+  - [1, 1, 0, 1]
+  - [1, 1, 1, 0]
+
+# Use a random pattern instead of the pattern above
+random_pattern : False
+
+# Amount of genes in each generation
+gene_count : 100
+
+# Mutation rate of each gene, 1 in <mutation_rate> chance
+mutation_rate : 3
+
+# How well the best organism performs before changing goal
+correctness_threshold : 0.85
